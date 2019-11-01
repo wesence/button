@@ -1,7 +1,6 @@
 // @flow
 import React from 'react';
 import { withTheme } from 'styled-components';
-// import ButtonIcon from './ButtonIcon';
 import { SubmitButton, UnstyledButton } from './Button.styled';
 
 type Props = {
