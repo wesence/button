@@ -7,6 +7,7 @@ const colors = {
   blue: '#1976D2',
   blueHover: '#0D47A1',
   red: '#D32F2F',
+  white: '#fff',
 };
 
 export default {

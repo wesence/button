@@ -2,22 +2,22 @@ import styled from 'styled-components';
 import theme from './styles/theme';
 
 export const SubmitButton = styled.button`
-  background-color: ${theme.colors.blue};
+  background-color: ${theme.colors.white};
   padding: 7px 15px;
   color: #ffffff;
   font-size: 16px;
   text-decoration: none;
   border-radius: 5px;
-  border: 2px solid ${theme.colors.blue};
+  border: 2px solid ${theme.colors.white};
   cursor: pointer;
   transition: ${theme.transition};
 
   &:hover,
   &:focus {
     color: #ffffff;
-    background-color: ${theme.colors.blueHover};
+    background-color: ${theme.colors.lightgrey};
     outline: unset;
-    border-color: ${theme.colors.blueHover};
+    border-color: ${theme.colors.white};
   }
 
   &:disabled {
