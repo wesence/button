@@ -4,7 +4,7 @@ import theme from './styles/theme';
 export const SubmitButton = styled.button`
   background-color: ${theme.colors.white};
   padding: 7px 15px;
-  color: #ffffff;
+  color: #000;
   font-size: 16px;
   text-decoration: none;
   border-radius: 5px;
@@ -14,7 +14,7 @@ export const SubmitButton = styled.button`
 
   &:hover,
   &:focus {
-    color: #ffffff;
+    color: #1976d2;
     background-color: ${theme.colors.lightgrey};
     outline: unset;
     border-color: ${theme.colors.white};
