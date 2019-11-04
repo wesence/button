@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import theme from './styles/theme';
 
-const primary = `
+const common = `
   background-color: ${theme.colors.blue};
   padding: 7px 15px;
   color: #ffffff;
@@ -30,7 +30,7 @@ const primary = `
   }
 `;
 
-const secondary = `
+const inverted = `
   color: ${theme.colors.blue};
   background-color: #ffffff;
   border-color: #ffffff;
@@ -44,9 +44,9 @@ const secondary = `
 `;
 
 export const SubmitButton = styled.button`
-  ${primary}
-  ${secondary}
   ${common}
+  ${({ invert }) => invert && inverted}
+  ${({ unstyled }) => unstyled && UnstyledButton}
   ${({ fluid }) =>
     fluid &&
     `
@@ -54,7 +54,7 @@ export const SubmitButton = styled.button`
   `}
 `;
 
-const common = styled.button`
+const UnstyledButton = styled.button`
   background: none;
   border: none;
   padding: 0;
