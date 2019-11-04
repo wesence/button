@@ -7,16 +7,25 @@ type Props = {
   onClick: (Object) => void,
   children: String,
   primary?: Boolean,
-  unstyled?: Boolean,
+  common?: Boolean,
+  secondary?: Boolean,
   fluid?: Boolean,
 };
 
-const Button = ({ onClick, children, primary, unstyled, fluid }: Props) => (
+const Button = ({
+  onClick,
+  children,
+  primary,
+  common,
+  fluid,
+  secondary,
+}: Props) => (
   <>
     <SubmitButton
       onClick={onClick}
       primary={primary}
-      unstyled={unstyled}
+      common={common}
+      secondary={secondary}
       fluid={fluid}>
       {children}
     </SubmitButton>

@@ -44,8 +44,9 @@ const secondary = `
 `;
 
 export const SubmitButton = styled.button`
-  ${(props) => (props.primary ? primary : secondary)}
-  ${(props) => (props.unstyled ? UnstyledButton : secondary)}
+  ${primary}
+  ${secondary}
+  ${common}
   ${({ fluid }) =>
     fluid &&
     `
@@ -53,7 +54,7 @@ export const SubmitButton = styled.button`
   `}
 `;
 
-const UnstyledButton = styled.button`
+const common = styled.button`
   background: none;
   border: none;
   padding: 0;
