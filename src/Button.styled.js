@@ -44,7 +44,7 @@ const secondary = `
 `;
 
 export const SubmitButton = styled.button`
-  ${(props) => (props.primary ? primary : secondary)}
+  ${primary}
   ${(props) => (props.unstyled ? UnstyledButton : secondary)}
   ${({ fluid }) =>
     fluid &&
