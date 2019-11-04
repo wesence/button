@@ -88,17 +88,21 @@ const common = `
 `;
 
 const UnstyledButton = `
-  background: none;
+  background-color: #ffffff;
   border: none;
   padding: 0.4375rem 0.9375rem;
-  color:#000;
+  color:#000000;
   margin: 0;
   font-size: 1rem;
   line-height: 1;
   cursor: pointer;
 
+  &:hover,
   &:focus {
-    outline: none;
+    color: black;
+    background-color: #ffffff;
+    border:none;
+    outline:none;
   }
 `;
 
