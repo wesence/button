@@ -88,7 +88,7 @@ const common = `
 `;
 
 export const SubmitButton = styled.button`
-  display:inline-block;
+  display:block;
   ${common}
   ${({ primary }) => primary && main}
   ${({ secondary }) => secondary && secondaries}
@@ -103,8 +103,9 @@ export const SubmitButton = styled.button`
 const UnstyledButton = `
   background: none;
   border: none;
-  padding: 0.5rem;
+  padding: 0.4375rem 0.9375rem;
   margin: 0;
+  font-size: 1rem;
   line-height: 1;
   cursor: pointer;
 
