@@ -92,6 +92,7 @@ export const SubmitButton = styled.button`
   ${({ primary }) => primary && main}
   ${({ secondary }) => secondary && secondaries}
   ${({ link }) => link && UnstyledButton}
+  display: inline-block;
   ${({ fluid }) =>
     fluid &&
     `

@@ -32,11 +32,6 @@ const Button = ({
       primary={primary}
       link={link}>
       {children}
-      style=
-      {{
-        marginTop: marginTop || 1,
-        marginBottom: marginBottom || 1,
-      }}
     </SubmitButton>
   </>
 );
