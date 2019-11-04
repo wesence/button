@@ -32,12 +32,12 @@ const main = `
 
 const secondaries = `
     background-color: ${theme.colors.turquoise};
-    padding: 7px 15px;
+    padding: 0.4375rem 0.9375rem;
     color: #ffffff;
-    font-size: 16px;
+    font-size: 1rem;
     text-decoration: none;
-    border-radius: 5px;
-    border: 2px solid ${theme.colors.turquoise};
+    border-radius: 0.3125rem;
+    border: 0.125rem solid ${theme.colors.turquoise};
     cursor: pointer;
     transition: ${theme.transition};
 
@@ -62,13 +62,28 @@ const secondaries = `
 const common = `
   color: ${theme.colors.blue};
   background-color: #ffffff;
-  border-color: #ffffff;
+  padding: 0.4375rem 0.9375rem;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 0.3125rem;
+  border: 0.125rem solid #ffffff;
+  cursor: pointer;
+  transition: ${theme.transition};
 
   &:hover,
   &:focus {
     color: ${theme.colors.blue};
     background-color: ${theme.colors.lightgrey};
     border-color: #ffffff;
+    outline:unset
+  }
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+
+  svg {
+    vertical-align: middle;
   }
 `;
 
