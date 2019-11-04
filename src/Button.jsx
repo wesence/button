@@ -6,11 +6,15 @@ import { SubmitButton } from './Button.styled';
 type Props = {
   onClick: (Object) => void,
   children: String,
+  primary?: Boolean,
+  unstyled?: Boolean,
 };
 
-const Button = ({ onClick, children }: Props) => (
+const Button = ({ onClick, children, primary, unstyled }: Props) => (
   <>
-    <SubmitButton onClick={onClick}>{children}</SubmitButton>
+    <SubmitButton onClick={onClick} primary={primary} unstyled={unstyled}>
+      {children}
+    </SubmitButton>
   </>
 );
 
