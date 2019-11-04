@@ -10,6 +10,8 @@ type Props = {
   secondary?: Boolean,
   fluid?: Boolean,
   link?: Boolean,
+  marginBottom?: String,
+  marginTop?: String,
 };
 
 const Button = ({
@@ -19,6 +21,8 @@ const Button = ({
   fluid,
   link,
   secondary,
+  marginBottom,
+  marginTop,
 }: Props) => (
   <>
     <SubmitButton
@@ -28,6 +32,11 @@ const Button = ({
       primary={primary}
       link={link}>
       {children}
+      style=
+      {{
+        marginTop: marginTop || 1,
+        marginBottom: marginBottom || 1,
+      }}
     </SubmitButton>
   </>
 );
