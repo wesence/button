@@ -91,7 +91,7 @@ const UnstyledButton = `
   background: none;
   border: none;
   padding: 0.4375rem 0.9375rem;
-  color:#000000;
+  color:#000;
   margin: 0;
   font-size: 1rem;
   line-height: 1;
