@@ -87,19 +87,6 @@ const common = `
   }
 `;
 
-export const SubmitButton = styled.button`
-  display:block;
-  ${common}
-  ${({ primary }) => primary && main}
-  ${({ secondary }) => secondary && secondaries}
-  ${({ link }) => link && UnstyledButton}
-  ${({ fluid }) =>
-    fluid &&
-    `
-    width: 100%;
-  `}
-`;
-
 const UnstyledButton = `
   background: none;
   border: none;
@@ -112,4 +99,17 @@ const UnstyledButton = `
   &:focus {
     outline: none;
   }
+`;
+
+export const SubmitButton = styled.button`
+  ${common}
+  ${({ primary }) => primary && main}
+  ${({ secondary }) => secondary && secondaries}
+  ${({ link }) => link && UnstyledButton}
+  display:inline-block;
+  ${({ fluid }) =>
+    fluid &&
+    `
+    width: 100%;
+  `}
 `;
