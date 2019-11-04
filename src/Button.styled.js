@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import theme from './styles/theme';
 
-const common = `
+const main = `
   background-color: ${theme.colors.blue};
   padding: 7px 15px;
   color: #ffffff;
@@ -30,7 +30,36 @@ const common = `
   }
 `;
 
-const inverted = `
+const secondaries = `
+    background-color: ${theme.colors.turquoise};
+    padding: 7px 15px;
+    color: #ffffff;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 2px solid ${theme.colors.turquoise};
+    cursor: pointer;
+    transition: ${theme.transition};
+
+    &:hover,
+    &:focus {
+      color: #ffffff;
+      background-color: ${theme.colors.mediumTurquoise};
+      outline: unset;
+      border-color: ${theme.colors.mediumTurquoise};
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      opacity: 0.5;
+    }
+
+    svg {
+      vertical-align: middle;
+    }
+`;
+
+const common = `
   color: ${theme.colors.blue};
   background-color: #ffffff;
   border-color: #ffffff;
@@ -45,8 +74,9 @@ const inverted = `
 
 export const SubmitButton = styled.button`
   ${common}
-  ${({ invert }) => invert && inverted}
-  ${({ unstyled }) => unstyled && UnstyledButton}
+  ${({ primary }) => primary && main}
+  ${({ secondary }) => secondary && secondaries}
+  ${({ link }) => link && UnstyledButton}
   ${({ fluid }) =>
     fluid &&
     `
@@ -57,7 +87,7 @@ export const SubmitButton = styled.button`
 const UnstyledButton = styled.button`
   background: none;
   border: none;
-  padding: 0;
+  padding: 0.5rem;
   margin: 0;
   line-height: 1;
   cursor: pointer;

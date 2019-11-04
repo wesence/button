@@ -8,6 +8,8 @@ const colors = {
   blueHover: '#0D47A1',
   red: '#D32F2F',
   white: '#ffffff',
+  turquoise: '#40E0D0',
+  mediumTurquoise: '#48D1CC',
 };
 
 export default {

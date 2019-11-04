@@ -6,17 +6,26 @@ import { SubmitButton } from './Button.styled';
 type Props = {
   onClick: (Object) => void,
   children: String,
-  invert?: Boolean,
+  primary?: Boolean,
+  secondary?: Boolean,
   fluid?: Boolean,
-  unstyled?: Boolean,
+  link?: Boolean,
 };
 
-const Button = ({ onClick, children, invert, fluid, unstyled }: Props) => (
+const Button = ({
+  onClick,
+  children,
+  primary,
+  fluid,
+  link,
+  secondary,
+}: Props) => (
   <>
     <SubmitButton
       onClick={onClick}
-      invert={invert}
-      unstyled={unstyled}
+      primary={primary}
+      secondary={secondary}
+      link={link}
       fluid={fluid}>
       {children}
     </SubmitButton>
