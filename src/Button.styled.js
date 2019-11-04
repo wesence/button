@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import theme from './styles/theme';
 
 const main = `
-  display: inline-block;
   background-color: ${theme.colors.blue};
   padding: 7px 15px;
   color: #ffffff;
@@ -32,7 +31,6 @@ const main = `
 `;
 
 const secondaries = `
-    display: inline-block;
     background-color: ${theme.colors.turquoise};
     padding: 0.4375rem 0.9375rem;
     color: #ffffff;
@@ -62,7 +60,6 @@ const secondaries = `
 `;
 
 const common = `
-  display: inline-block;
   color: ${theme.colors.blue};
   background-color: #ffffff;
   padding: 0.4375rem 0.9375rem;
@@ -91,6 +88,7 @@ const common = `
 `;
 
 export const SubmitButton = styled.button`
+  display:inline-block;
   ${common}
   ${({ primary }) => primary && main}
   ${({ secondary }) => secondary && secondaries}
@@ -102,8 +100,7 @@ export const SubmitButton = styled.button`
   `}
 `;
 
-const UnstyledButton = styled.button`
-  display: inline-block;
+const UnstyledButton = `
   background: none;
   border: none;
   padding: 0.5rem;
