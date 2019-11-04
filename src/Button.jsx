@@ -22,10 +22,10 @@ const Button = ({
 }: Props) => (
   <>
     <SubmitButton
+      secondary={secondary}
       onClick={onClick}
       fluid={fluid}
       primary={primary}
-      secondary={secondary}
       link={link}>
       {children}
     </SubmitButton>
