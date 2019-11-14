@@ -1,6 +1,5 @@
 // @flow
 import React from 'react';
-import { withTheme } from 'styled-components';
 import { SubmitButton } from './Button.styled';
 
 type Props = {
@@ -10,6 +9,7 @@ type Props = {
   secondary?: Boolean,
   fluid?: Boolean,
   link?: Boolean,
+  theme?: Object,
 };
 
 const Button = ({
@@ -19,9 +19,11 @@ const Button = ({
   fluid,
   link,
   secondary,
+  theme,
 }: Props) => (
   <>
     <SubmitButton
+      theme={theme}
       secondary={secondary}
       onClick={onClick}
       fluid={fluid}
@@ -32,4 +34,4 @@ const Button = ({
   </>
 );
 
-export default withTheme(Button);
+export default Button;

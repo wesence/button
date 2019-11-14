@@ -1,23 +1,22 @@
 import styled from 'styled-components';
-import theme from './styles/theme';
 
 const main = `
-  background-color: ${theme.colors.blue};
+  background-color: ${(props) => props.theme.colors.btnPrimary};
   padding: 7px 15px;
   color: #ffffff;
   font-size: 16px;
   text-decoration: none;
   border-radius: 5px;
-  border: 2px solid ${theme.colors.blue};
+  border: 2px solid ${(props) => props.theme.colors.btnPrimary};
   cursor: pointer;
-  transition: ${theme.transition};
+  transition:  ${(props) => props.theme.transition};
 
   &:hover,
   &:focus {
     color: #ffffff;
-    background-color: ${theme.colors.blueHover};
+    background-color: ${(props) => props.theme.colors.btnPrimaryHover};
     outline: unset;
-    border-color: ${theme.colors.blueHover};
+    border-color: ${(props) => props.theme.colors.btnPrimaryHover};
   }
 
   &:disabled {
@@ -31,22 +30,22 @@ const main = `
 `;
 
 const secondaries = `
-    background-color: ${theme.colors.turquoise};
+    background-color: ${(props) => props.theme.colors.btnSecondary};
     padding: 0.4375rem 0.9375rem;
     color: #ffffff;
     font-size: 1rem;
     text-decoration: none;
     border-radius: 0.3125rem;
-    border: 0.125rem solid ${theme.colors.turquoise};
+    border: 0.125rem solid ${(props) => props.theme.colors.btnSecondary};
     cursor: pointer;
-    transition: ${theme.transition};
+    transition:  ${(props) => props.theme.transition};
 
     &:hover,
     &:focus {
       color: #ffffff;
-      background-color: ${theme.colors.mediumTurquoise};
+      background-color: ${(props) => props.theme.colors.btnSecondaryLight};
       outline: unset;
-      border-color: ${theme.colors.mediumTurquoise};
+      border-color: ${(props) => props.theme.colors.btnSecondaryLight};
     }
 
     &:disabled {
@@ -60,7 +59,7 @@ const secondaries = `
 `;
 
 const common = `
-  color: ${theme.colors.blue};
+  color: ${(props) => props.theme.colors.btnPrimary};
   background-color: #ffffff;
   padding: 0.4375rem 0.9375rem;
   text-decoration: none;
@@ -68,12 +67,12 @@ const common = `
   border-radius: 0.3125rem;
   border: 0.125rem solid #ffffff;
   cursor: pointer;
-  transition: ${theme.transition};
+  transition:  ${(props) => props.theme.transition};
 
   &:hover,
   &:focus {
-    color: ${theme.colors.blue};
-    background-color: ${theme.colors.lightgrey};
+    color:${(props) => props.theme.colors.btnPrimary};
+    background-color:${(props) => props.theme.colors.textSecondaryLight};
     border-color: #ffffff;
     outline:unset
   }
