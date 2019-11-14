@@ -1,7 +1,6 @@
 // @flow
 import React from 'react';
 import { SubmitButton } from './Button.styled';
-import theme from './styles/theme';
 
 type Props = {
   onClick: (Object) => void,
@@ -10,6 +9,7 @@ type Props = {
   secondary?: Boolean,
   fluid?: Boolean,
   link?: Boolean,
+  theme?: Object,
 };
 
 const Button = ({
@@ -19,6 +19,7 @@ const Button = ({
   fluid,
   link,
   secondary,
+  theme,
 }: Props) => (
   <>
     <SubmitButton

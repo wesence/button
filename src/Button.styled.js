@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 const main = (props) => `
-  color: ${console.log(props.theme)};
   background-color: ${props.theme.colors.btnPrimary};
   padding: 7px 15px;
   color: #ffffff;
