@@ -106,6 +106,7 @@ const UnstyledButton = `
 `;
 
 export const SubmitButton = styled.button`
+ ${theme}
   ${common}
   ${({ primary }) => primary && main}
   ${({ secondary }) => secondary && secondaries}
