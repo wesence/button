@@ -1,22 +1,22 @@
 import styled from 'styled-components';
 
-const main = `
-  background-color: ${(props) => props.theme.colors.btnPrimary};
+const main = (props) => `
+  background-color: ${props.theme.colors.btnPrimary};
   padding: 7px 15px;
   color: #ffffff;
   font-size: 16px;
   text-decoration: none;
   border-radius: 5px;
-  border: 2px solid ${(props) => props.theme.colors.btnPrimary};
+  border: 2px solid ${props.theme.colors.btnPrimary};
   cursor: pointer;
-  transition:  ${(props) => props.theme.transition};
+  transition:  ${props.theme.transition};
 
   &:hover,
   &:focus {
     color: #ffffff;
-    background-color: ${(props) => props.theme.colors.btnPrimaryHover};
+    background-color: ${props.theme.colors.btnPrimaryHover};
     outline: unset;
-    border-color: ${(props) => props.theme.colors.btnPrimaryHover};
+    border-color: ${props.theme.colors.btnPrimaryHover};
   }
 
   &:disabled {
@@ -29,23 +29,23 @@ const main = `
   }
 `;
 
-const secondaries = `
-    background-color: ${(props) => props.theme.colors.btnSecondary};
+const secondaries = (props) => `
+    background-color: ${props.theme.colors.btnSecondary};
     padding: 0.4375rem 0.9375rem;
     color: #ffffff;
     font-size: 1rem;
     text-decoration: none;
     border-radius: 0.3125rem;
-    border: 0.125rem solid ${(props) => props.theme.colors.btnSecondary};
+    border: 0.125rem solid ${props.theme.colors.btnSecondary};
     cursor: pointer;
-    transition:  ${(props) => props.theme.transition};
+    transition:  ${props.theme.transition};
 
     &:hover,
     &:focus {
       color: #ffffff;
-      background-color: ${(props) => props.theme.colors.btnSecondaryLight};
+      background-color: ${props.theme.colors.btnSecondaryLight};
       outline: unset;
-      border-color: ${(props) => props.theme.colors.btnSecondaryLight};
+      border-color: ${props.theme.colors.btnSecondaryLight};
     }
 
     &:disabled {
@@ -58,8 +58,8 @@ const secondaries = `
     }
 `;
 
-const common = `
-  color: ${(props) => props.theme.colors.btnPrimary};
+const common = (props) => `
+  color: ${props.theme.colors.btnPrimary};
   background-color: #ffffff;
   padding: 0.4375rem 0.9375rem;
   text-decoration: none;
@@ -67,12 +67,12 @@ const common = `
   border-radius: 0.3125rem;
   border: 0.125rem solid #ffffff;
   cursor: pointer;
-  transition:  ${(props) => props.theme.transition};
+  transition:  ${props.theme.transition};
 
   &:hover,
   &:focus {
-    color:${(props) => props.theme.colors.btnPrimary};
-    background-color:${(props) => props.theme.colors.textSecondaryLight};
+    color:${props.theme.colors.btnPrimary};
+    background-color:${props.theme.colors.textSecondaryLight};
     border-color: #ffffff;
     outline:unset
   }
@@ -106,10 +106,9 @@ const UnstyledButton = `
 `;
 
 export const SubmitButton = styled.button`
- ${theme}
   ${common}
-  ${({ primary }) => primary && main}
-  ${({ secondary }) => secondary && secondaries}
+  ${({ primary, ...props }) => primary && main(props)}
+  ${({ secondary, ...props }) => secondary && secondaries(props)}
   ${({ link }) => link && UnstyledButton}
   display:inline-block;
   ${({ fluid }) =>
