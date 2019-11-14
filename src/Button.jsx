@@ -23,8 +23,8 @@ const Button = ({
 }: Props) => (
   <>
     <SubmitButton
-      theme={theme}
       secondary={secondary}
+      theme={theme}
       onClick={onClick}
       fluid={fluid}
       primary={primary}
